@@ -368,11 +368,22 @@ menu {
 .technolies {
   width: 100%;
   height: 144px;
+  display: flex;
+  justify-content: center;
 }
 
 .technolies-container {
   width: 80%;
   display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.technolies-container-center {
+  display: flex;
+  justify-content: center;
+  position: relative;
   flex-wrap: nowrap;
 }
 .technolies-container img {
@@ -385,7 +396,7 @@ menu {
 
 /* get in touch css start from here*/
 .get-in-touch {
-  background-color: #000000;
+  background-color: #063455;
   width: 100%;
   color: #ffffff;
   height: auto;
@@ -414,6 +425,139 @@ menu {
 .get-in-touch-content span {
   font-size: 20px;
   margin-bottom: 30px;
+}
+/* tget in touch css ends here*/
+
+/* Testimonial css start from here*/
+
+.testimonial {
+  background-color: #000000;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.testimonial-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 110px;
+  margin-bottom: 90px;
+}
+
+.testimonial-container h1 {
+  font-size: 38px;
+  margin-bottom: 145px;
+  color: #ffffff;
+}
+.testimonial-subcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.testimonial-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 350px;
+  justify-content: center;
+  background-color: rgb(17, 17, 17);
+
+  color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 80px;
+}
+
+.testimonial-item::after {
+  content: "“";
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 100px;
+  height: 100px;
+  color: #fecb54;
+}
+
+.testimonial-item:hover {
+  color: #000000;
+  background-color: #fecb54;
+  transform: translate(0, -5px);
+  transition: 0.5s;
+}
+
+.testimonial-item:hover::after {
+  color: #000000;
+}
+
+.testimonial-item h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+.testimonial-item p {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 30px 30px;
+}
+.client-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 20px 10px;
+}
+.client-info img {
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+.client-info-text p {
+  margin: 0;
+}
+
+/* Testimonial in touch css ends here*/
+
+/*  css feedback start from here*/
+
+.feedback {
+  background-image: url("../assets/images/971.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  z-index: -1;
+  position: absolute;
+
+  justify-content: center;
+}
+.feedback-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 8% 0;
+}
+
+.feedback-area p {
+  font-size: 28px;
+  color: #ffffff;
+  width: 40%;
+  margin-top: 28px;
+  margin-bottom: 30px;
+}
+.feedback-area h3 {
+  font-size: 20px;
+  color: #ffffff;
+}
+.feedback-area h3 span {
+  font-size: 16px;
+  color: #ffffff;
 }
 
 @media (max-width: 640px) {
