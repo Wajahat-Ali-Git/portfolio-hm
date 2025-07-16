@@ -175,6 +175,11 @@ menu {
   width: 100%;
   height: 100vh;
 }
+.banner-image{
+  width: 200px;
+  height: 180px;
+  border-radius: 50%;
+}
 .banner-sub-container {
   display: flex;
   width: 80%;
@@ -196,12 +201,13 @@ menu {
   font-weight: 400;
   margin-bottom: 12px;
 }
-.banner-main-container h1 {
+.banner-main-container h1  {
   display: flex;
   font-size: 42px;
   font-weight: bold;
   margin-bottom: 17px;
   white-space: nowrap;
+  justify-content: center;
   align-items: center;
 }
 
@@ -221,18 +227,23 @@ menu {
   width: 0;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 5s steps(4) infinite;
+  animation: typing 4s steps(8) infinite;
 }
 .git-btn {
   padding: 11px 32px;
   font-size: 18px;
   font-family: "General sans", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   background-color: #fecb54;
   border: none;
   border-radius: 5px;
   text-decoration: none;
   color: #000000;
+}
+
+.git-btn:hover {
+  transition: 2s ;
+  background-color: #ffffff;
 }
 
 /* banner css ends here*/
@@ -501,7 +512,7 @@ menu {
 }
 
 .testimonial-container {
-  width: 60%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -517,6 +528,10 @@ menu {
   color: #ffffff;
 }
 .testimonial-subcontainer {
+  width: 100%;
+  
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -732,6 +747,34 @@ menu {
 .copyright-container p img {
   width: 15px;
   height: 15px;
+}
+
+.move-up{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top : 0;
+  right: 15px;
+  background-color: #fecb54;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.9s ease;
+  z-index: 4;
+
+}
+
+.active{
+  
+  visibility: visible;
+  top: 98%;
+  opacity: 1;
+  transform: translateY(-98%);
+  
+
 }
 @media (max-width: 1200px) {
   .technolies-container-center {

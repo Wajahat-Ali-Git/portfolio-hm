@@ -6,7 +6,24 @@ window.addEventListener("scroll", function () {
   } else {
     navbar.classList.remove("scrolled");
   }
+  
 });
+
+
+
+// move-up buttom function
+
+window.addEventListener("scroll", function(){
+  const moveUpButton = this.document.getElementById("moveUp-handler")
+
+  if(window.scrollY > 500 ){
+    moveUpButton.classList.add('active');
+  } else {
+    moveUpButton.classList.remove('active');
+  }
+})
+// move-up buttom function ends here
+ 
 
 const text = document.querySelector(".text-change");
 
@@ -17,13 +34,13 @@ const textLoad = () => {
 
   setTimeout(() => {
     text.textContent = "a Frontend";
-  }, 5000);
+  }, 4000);
 
   setTimeout(() => {
     text.textContent = "a Backend";
-  }, 10000);
+  }, 8000);
 };
 
 textLoad();
 
-setInterval(textLoad, 15300);
+setInterval(textLoad, 12000);
