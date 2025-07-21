@@ -22,7 +22,7 @@ window.addEventListener("scroll", function () {
 
 window.addEventListener("scroll", function () {
   if (window.scrollY > 1100) {
-    setInterval(intervalFunc, 10);
+    number();
   }
 });
 
@@ -37,29 +37,42 @@ const textLoad = () => {
 
   setTimeout(() => {
     text.textContent = "a Frontend";
-  }, 4000);
+  }, 8000);
 
   setTimeout(() => {
     text.textContent = "a Backend";
-  }, 8000);
+  }, 16000);
 };
 
 textLoad();
 
-setInterval(textLoad, 12000);
+setInterval(textLoad, 24000);
 
 // auto number increment section start from here
 
 var count = document.getElementsByClassName("count");
-var inc = [];
-function intervalFunc() {
-  for (let i = 0; i < count.length; i++) {
-    // console.log(count.length);
-    // console.log(i);
-    inc.push(1);
-    if (inc[i] != count[i].getAttribute("max-data")) {
-      inc[i]++;
+var inc = new Array(count.length).fill(0);
+
+// Convert string to number
+function getMax(i) {
+  return parseInt(count[i].getAttribute("max-data"));
+}
+function number() {
+  var interval = setInterval(function intervalFunc() {
+    let allDone = true;
+
+    for (let i = 0; i < count.length; i++) {
+      let max = getMax(i);
+
+      if (inc[i] < max) {
+        inc[i]++;
+        count[i].innerHTML = inc[i];
+        allDone = false;
+      }
     }
-    count[i].innerHTML = inc[i];
-  }
+
+    if (allDone) {
+      clearInterval(interval); // Stop the interval when all counters are done
+    }
+  }, 50); // Adjust speed as needed
 }
