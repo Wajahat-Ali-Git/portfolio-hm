@@ -17,7 +17,7 @@ body {
 }
 .portfolio-banner {
   display: flex;
-  background-image: url("../assets/images/background.jpg");
+  background-image: url("../assets/images/banner-image.gif");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -218,7 +218,7 @@ menu {
 }
 .banner-main-container h5 {
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 12px;
 }
 .banner-main-container h1 {
@@ -719,6 +719,7 @@ menu {
 
 .feedback {
   background-image: url("../assets/images/971.jpg");
+  background-attachment: fixed;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -918,7 +919,7 @@ menu {
 @media (max-width: 1440px) {
   .portfolio-banner {
     display: flex;
-    background-image: url("../assets/images/background.jpg");
+    background-image: url("../assets/images/banner-image.gif");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -979,6 +980,11 @@ menu {
   .open-menu {
     display: block;
   }
+
+  .scrolled .nav-items ul li a {
+    color: #ffffff;
+  }
+
   #check:checked ~ .menu {
     top: 65px;
     transition: 0.7s ease;
@@ -1121,7 +1127,7 @@ menu {
     justify-self: center;
     width: 80%;
     margin: 0 10px;
-    height: 400px;
+    height: 460px;
     position: fixed;
     top: -100%;
     right: 0;
